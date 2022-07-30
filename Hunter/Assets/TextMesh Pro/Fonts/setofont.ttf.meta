@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e451e2d7048adea42be6283982cd27f6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SetoFont
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 432308061da5ea24797d2310f140a283, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
