@@ -1,62 +1,62 @@
-
+ï»¿
 using UnityEngine;
 
 namespace Chen
 {
     /// <summary>
-    /// ¾Ç²ßÄæ¦ì
+    /// å­¸ç¿’æ¬„ä½
     ///
     /// </summary>
  
     public class LearnField : MonoBehaviour
     {
-        //Äæ¦ì»yªk:
-        //­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ;
+        //æ¬„ä½èªæ³•:
+        //ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨±;
         private int number;
-        //­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ;
+        //ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨±;
         private int level = 1;
-        //¨p¤H:¦¹Ãş§O¥i¥H¦s¨ú ¤£·|Åã¥Ü¦bÄİ©Ê­±ªO
+        //ç§äºº:æ­¤é¡åˆ¥å¯ä»¥å­˜å– ä¸æœƒé¡¯ç¤ºåœ¨å±¬æ€§é¢æ¿
         private int scoreA = 60;
-        //¤½¶}:©Ò¦³Ãş§O¥i¥H¦s¨ú ·|Åã¥Ü¦bÄİ©Ê­±ªO
-        //¾ã¼Æ int
+        //å…¬é–‹:æ‰€æœ‰é¡åˆ¥å¯ä»¥å­˜å– æœƒé¡¯ç¤ºåœ¨å±¬æ€§é¢æ¿
+        //æ•´æ•¸ int
         public int scoreB = 90;
-        //¯BÂI¼Æ float
+        //æµ®é»æ•¸ float
         public float speed = 3.5f;
-        //¦r¦ê string
-        public string weapon = "¤õ½bµ©";
-        //¥¬ªL­È
+        //å­—ä¸² string
+        public string weapon = "ç«ç®­ç­’";
+        //å¸ƒæ—å€¼
         public bool isDead = false;
         public bool isGrounded = true;
 
-        #region Unity ±`¥ÎÃş«¬
-        //¦V¶q
+        #region Unity å¸¸ç”¨é¡å‹
+        //å‘é‡
         public Vector2 v2Position;
         public Vector2 v2One = Vector2.one;
         public Vector2 v2Custom = new Vector2(7.5f, 9.5f);
         public Vector2 v3Custom = new Vector3(1, 2, 3);
         public Vector2 v4Custom = new Vector4(9, 8, 7, 6);
 
-        //ÃC¦â
+        //é¡è‰²
         public Color colorDefult;
         public Color colorRed = Color.red;
         public Color colorCustom = new Color(1, 0, 1);
         public Color colorCustomRGBA = new Color(0, 1, 0, 0.5f);
 
-        //¦CÁ|¸ê®Æ «öÁä
+        //åˆ—èˆ‰è³‡æ–™ æŒ‰éµ
         public KeyCode keyA = KeyCode.A;
         public KeyCode keyJumo = KeyCode.Space;
         public KeyCode keyFire = KeyCode.Mouse0;
 
-        //¯À§÷Ãş«¬:¤£¯à«ü©w­È ³z¹L API ©ÎªÌÄİ©Ê­±ªO©ì¦²
+        //ç´ æé¡å‹:ä¸èƒ½æŒ‡å®šå€¼ é€é API æˆ–è€…å±¬æ€§é¢æ¿æ‹–æ›³
         public AudioClip soundAttack;
         public Sprite picureWin;
         public Material materialDissolve;
         
-        //¹CÀ¸ª«¥ó:¶¥¼h­±ªO»P±M®×¤ºªºª«¥ó©Î¹w¸mª«
+        //éŠæˆ²ç‰©ä»¶:éšå±¤é¢æ¿èˆ‡å°ˆæ¡ˆå…§çš„ç‰©ä»¶æˆ–é ç½®ç‰©
         public GameObject goBlue;
         public GameObject prefabMarble;
        
-        //¤¸¥ó
+        //å…ƒä»¶
         public ParticleSystem psLight;
         public Camera maimCamera;
 
@@ -66,26 +66,26 @@ namespace Chen
 
         public void Awake()
         {
-            // ¨ú ¨ú±o¸ê®Æ Get
-            // Äæ¦ì¦WºÙ
-            //¥H Unity Äİ©Ê­±ªO¬°¥D
+            // å– å–å¾—è³‡æ–™ Get
+            // æ¬„ä½åç¨±
+            //ä»¥ Unity å±¬æ€§é¢æ¿ç‚ºä¸»
             print(level);
-            print("³t«×:" + speed);
-            //¦s ¦s©ñ¸ê®Æ Set
+            print("é€Ÿåº¦:" + speed);
+            //å­˜ å­˜æ”¾è³‡æ–™ Set
         }
-    #region Äæ¦ìÄİ©Ê Field Attribute
-    [Header("¼ĞÃD")]
+    #region æ¬„ä½å±¬æ€§ Field Attribute
+    [Header("æ¨™é¡Œ")]
     public int testint = 10;
-    [Tooltip("§Ú¬O´£¥Ü")]
+    [Tooltip("æˆ‘æ˜¯æç¤º")]
     public float testfloat = 3.5f;
     [Range(10, 100)]
     public int numberTest = 99;
     [Range(2.5f, 7.5f)]
     public float numberFloatTest = 5.5f;
-    //Range ¥u¯à©ñ¦b¾ã¼Æ¤Î¯BÂI¾ğ¤W
+    //Range åªèƒ½æ”¾åœ¨æ•´æ•¸åŠæµ®é»æ¨¹ä¸Š
     public bool booltest;
         [SerializeField]
-        private string weaponName = "¬ü¤u¤M";
+        private string weaponName = "ç¾å·¥åˆ€";
 
 
 
