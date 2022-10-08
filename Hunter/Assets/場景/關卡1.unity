@@ -813,6 +813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c060db53a04c15b43a6bebb48f189def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10.5
+  countshootMarble: 10
+  speedMarble: 1500
+  intervalShoot: 0.5
+  prefabMarble: {fileID: 0}
 --- !u!4 &116233857
 Transform:
   m_ObjectHideFlags: 0
@@ -821,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116233855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.047649384, y: 2.9733768, z: -2.6693046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7871,6 +7876,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2021683560567721682, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
   m_PrefabInstance: {fileID: 1271590876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &500105841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500105840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060db53a04c15b43a6bebb48f189def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10.5
+  countshootMarble: 10
+  speedMarble: 1500
+  intervalShoot: 0.5
+  prefabMarble: {fileID: 0}
 --- !u!1001 &576401841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10332,6 +10354,12 @@ MonoBehaviour:
   prefabMarble: {fileID: 3635712872357808618, guid: 389159f08649b8c4aa184f28dfea6aca, type: 3}
   psLight: {fileID: 444238903}
   maimCamera: {fileID: 429479986}
+  testint: 10
+  testfloat: 3.5
+  numberTest: 99
+  numberFloatTest: 5.5
+  booltest: 0
+  weaponName: "\u7F8E\u5DE5\u5200"
 --- !u!4 &961234430
 Transform:
   m_ObjectHideFlags: 0
@@ -12959,7 +12987,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8c201788307d7e9489001a0f5e864b58, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1211221653574093876, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
 --- !u!1001 &1353461676
 PrefabInstance:

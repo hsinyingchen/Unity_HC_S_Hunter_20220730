@@ -73,7 +73,23 @@ namespace Chen
             print("速度:" + speed);
             //存 存放資料 Set
         }
+    #region 欄位屬性 Field Attribute
+    [Header("標題")]
+    public int testint = 10;
+    [Tooltip("我是提示")]
+    public float testfloat = 3.5f;
+    [Range(10, 100)]
+    public int numberTest = 99;
+    [Range(2.5f, 7.5f)]
+    public float numberFloatTest = 5.5f;
+    //Range 只能放在整數及浮點樹上
+    public bool booltest;
+        [SerializeField]
+        private string weaponName = "美工刀";
 
+
+
+    #endregion
 
     }
 
