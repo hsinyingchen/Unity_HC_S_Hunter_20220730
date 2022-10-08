@@ -1,14 +1,14 @@
-
+ï»¿
 using UnityEngine;
 
 namespace Chen 
 {
     /// <summary>
-    /// ¾Ç²ß¹Bºâ¤l
-    /// 1.¼Æ¾Ç
-    /// 2.¤ñ¸û
-    /// 3.ÅŞ¿è
-    /// 4.¤T¤¸
+    /// å­¸ç¿’é‹ç®—å­
+    /// 1.æ•¸å­¸
+    /// 2.æ¯”è¼ƒ
+    /// 3.é‚è¼¯
+    /// 4.ä¸‰å…ƒ
     /// </summary>
     public class LearnOperator : MonoBehaviour
     {
@@ -17,58 +17,60 @@ namespace Chen
             //OperatorMath();
             //OperatorComparison();
             //OperatorLogic();
+            //OperatorTernary();
+
         }
 
         private float a = 10, b = 3;
 
         ///<summary>
-        ///¼Æ¾Ç¹Bºâ¤l
+        ///æ•¸å­¸é‹ç®—å­
         ///<summary>
         private void OperatorMath() 
         { 
-        //¥[,´î,­¼,°£,¾l,
+        //åŠ ,æ¸›,ä¹˜,é™¤,é¤˜,
         
-            print("¥[ªk" + (a + b));   //13
-            print("´îªk" + (a - b));   //7
-            print("­¼ªk" + (a * b));   //30
-            print("°£ªk" + (a / b));   //3.333
-            print("¾l¼Æ" + (a % b));   //1
+            print("åŠ æ³•" + (a + b));   //13
+            print("æ¸›æ³•" + (a - b));   //7
+            print("ä¹˜æ³•" + (a * b));   //30
+            print("é™¤æ³•" + (a / b));   //3.333
+            print("é¤˜æ•¸" + (a % b));   //1
 
         }
         ///<summary>
-        ///¤ñ¸û¹Bºâ¤l
+        ///æ¯”è¼ƒé‹ç®—å­
         ///<summary>
         private void OperatorComparison() 
         { 
-        //¤j©ó,¤p©ó, ¤j©óµ¥©ó, ¤p©óµ¥©ó, µ¥©ó, ¤£µ¥©ó
-        //¤ñ¸û¹Bºâ¤lªºµ²ªG¬°¥¬ªL­È, ¬°truw, false
-        print ("¤j©ó" + (a > b));        //t
-        print ("¤p©ó" + (a < b));        //f
-        print ("¤j©óµ¥©ó" + (a >= b));        //t
-        print ("¤p©óµ¥©ó" + (a <= b));        //f
-        print ("µ¥©ó" + (a == b));        //f
-        print ("¤£µ¥©ó" + (a != b));        //t
+        //å¤§æ–¼,å°æ–¼, å¤§æ–¼ç­‰æ–¼, å°æ–¼ç­‰æ–¼, ç­‰æ–¼, ä¸ç­‰æ–¼
+        //æ¯”è¼ƒé‹ç®—å­çš„çµæœç‚ºå¸ƒæ—å€¼, ç‚ºtruw, false
+        print ("å¤§æ–¼" + (a > b));        //t
+        print ("å°æ–¼" + (a < b));        //f
+        print ("å¤§æ–¼ç­‰æ–¼" + (a >= b));        //t
+        print ("å°æ–¼ç­‰æ–¼" + (a <= b));        //f
+        print ("ç­‰æ–¼" + (a == b));        //f
+        print ("ä¸ç­‰æ–¼" + (a != b));        //t
                         
         }
         private void OperatorLogic() 
         {
-            //¨Ã¥B, ©ÎªÌ, ÄA­Ë
-            //¨Ã¥B: ¤ñ¸û¨â­Ó¥¬ªL­È
-            //¥u­n¨ä¤¤¤@­Ó¥¬ªL­Èµ¥©óf, «hµ²ªG¬°f
+            //ä¸¦ä¸”, æˆ–è€…, é¡›å€’
+            //ä¸¦ä¸”: æ¯”è¼ƒå…©å€‹å¸ƒæ—å€¼
+            //åªè¦å…¶ä¸­ä¸€å€‹å¸ƒæ—å€¼ç­‰æ–¼f, å‰‡çµæœç‚ºf
             print(true && true);          //t
             print(true && false);          //f
             print(false && true);          //f
             print(false && false);          //f
 
-            //©ÎªÌ:¤ñ¸û¨â­Ó¥¬ªL­È
-            //¥u­n¨ä¤¤¤@­Ó¥¬ªL­Èµ¥©ót, «hµ²ªG¬°t
+            //æˆ–è€…:æ¯”è¼ƒå…©å€‹å¸ƒæ—å€¼
+            //åªè¦å…¶ä¸­ä¸€å€‹å¸ƒæ—å€¼ç­‰æ–¼t, å‰‡çµæœç‚ºt
             print(true || true);          //t
             print(true || false);          //t
             print(false || true);          //t
             print(false || false);          //f
 
-            //ÄA­Ë
-            //±N¥¬ªL­È¥æ´«
+            //é¡›å€’
+            //å°‡å¸ƒæ—å€¼äº¤æ›
             print(!true);          //f
             print(!false);          //t
             print(!(a > b));          //f
@@ -76,6 +78,17 @@ namespace Chen
 
         }
 
+        private void OperatorTernary() 
+        {
+            //èªæ³•
+            //å¸ƒæ—å€¼ ? é‹ç®—å¼ä¸€:é‹ç®—å¼äºŒ:
+            //ç•¶å¸ƒæ—å€¼ç‚ºtrueæ™‚åŸ·è¡Œé‹ç®—å¼ä¸€
+            //ç•¶å¸ƒæ—å€¼ç‚ºfalseæ™‚åŸ·è¡Œé‹ç®—å¼äºŒ
+            print(true ? "æˆ‘æ˜¯é‹ç®—å¼ä¸€" : "æˆ‘æ˜¯é‹ç®—å¼äºŒ");
+            print((a < b) ? "a å°æ–¼ b" : "a å¤§æ–¼ b");
+
+        }
+            
 
     }
 
