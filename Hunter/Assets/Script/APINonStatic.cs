@@ -50,6 +50,7 @@ namespace Chen
         public Canvas canvas;
 
         public Rigidbody rigiSphere;
+
         public Transform traCube;
         public Transform traSphere;
         public Transform traCapsule;
